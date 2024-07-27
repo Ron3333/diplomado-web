@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   /* Starts Menu horizontal css*/
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    li {
+      position: relative;
+    }
+    
+    li a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: aquamarine;
+      border: 1px solid blue;
+    }
+
+  
+    li a:hover {
+      background-color: #ddd;
+    }
+ 
+    li ul {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: #fff;
+      /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+      z-index: 1;
+      white-space: nowrap;
+    }
+
+
+    li:hover > ul {
+      display: block;
+    }
+
+  
+   /* li ul li {
+      position: relative;
+    }*/
+
+    li ul li ul {
+      
+      left: 100%;
+      top: 0;
+    }
+
+    
+    /* End Menu horizontal css*/
+
+  </style>
+</head>
+<body>
+   <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li>
+        <a href="#">Productos</a>
+        <ul>
+          <li><a href="#">Producto 1</a></li>
+          <li><a href="#">Producto 2</a></li>
+          <li>
+            <a href="#">Producto 3</a>
+            <ul>
+              <li><a href="#">Variante 1</a></li>
+              <li><a href="#">Variante 2</a></li>
+              <li><a href="#">Variante 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li> 
+      <li><a href="#">Acerca de</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav> 
+
+<!-- Este código HTML y CSS crea un menú de navegación horizontal con submenús desplegables. Aquí está la explicación de cada parte:
+
+1. **CSS para el menú horizontal:**
+   - Se define un estilo para la lista (`ul`) que contiene los elementos del menú.
+   - Se establece que la lista no tenga viñetas (`list-style-type: none;`), y se elimina el margen y el relleno predeterminados.
+   - Se utiliza `display: flex;` en el contenedor (`ul`) para que los elementos del menú se muestren en línea.
+   - Cada elemento de la lista (`li`) se posiciona de manera relativa (`position: relative;`).
+   - Los enlaces (`a`) dentro de los elementos de la lista se muestran como bloques (`display: block;`) con estilos de color, texto y relleno específicos.
+   - Cuando se pasa el cursor sobre un enlace (`a:hover`), se cambia el color de fondo.
+   - Los submenús (`ul`) se ocultan inicialmente (`display: none;`) y se posicionan de manera absoluta debajo de sus elementos parentales (`position: absolute;`). Se muestran al pasar el cursor sobre el elemento padre.
+   - Los submenús son blancos y tienen un efecto de sombra y z-index para superposición.
+   - Se establece que los submenús no se envuelvan al final de la línea (`white-space: nowrap;`).
+   - Al pasar el cursor sobre un elemento de la lista (`li:hover > ul`), se muestra su submenú.
+
+2. **HTML del menú:**
+   - En el cuerpo (`<body>`) del documento, se encuentra la estructura del menú dentro de un elemento de navegación (`<nav>`).
+   - El menú principal está contenido en una lista desordenada (`<ul>`), donde cada elemento de menú está representado por un elemento de lista (`<li>`).
+   - Cada elemento de menú contiene un enlace (`<a>`) que lleva a una página o acción específica.
+   - Algunos elementos de menú tienen submenús anidados, representados por listas (`<ul>`) anidadas dentro de elementos de lista (`<li>`).
+ -->
+
+ 
+</body>
+</html>

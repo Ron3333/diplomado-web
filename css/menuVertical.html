@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos para el menú */
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100px;
+    }
+
+    li {
+      position: relative;
+    }
+
+    li a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    li a:hover {
+      background-color: #ddd;
+    }
+
+    li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    li:hover > ul {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li>
+        <a href="#">Productos</a>
+        <ul>
+          <li><a href="#">Producto 1</a></li>
+          <li><a href="#">Producto 2</a></li>
+          <li>
+            <a href="#">Producto 3</a>
+            <ul>
+              <li><a href="#">Variante 1</a></li>
+              <li><a href="#">Variante 2</a></li>
+              <li><a href="#">Variante 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Acerca de</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

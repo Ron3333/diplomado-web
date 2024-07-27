@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      width: 200px;
+      height: 150px;
+      border: 1px solid black;
+      margin-bottom: 20px;
+    }
+
+    .visible {
+      overflow: visible;
+    }
+
+    .hidden {
+      overflow: hidden;
+    }
+
+    .scroll {
+      overflow: scroll;
+    }
+
+    .auto {
+      overflow: auto;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container visible">
+    <p>Este es un texto que excede el tamaño del contenedor. El valor de overflow es 'visible', por lo que el contenido se mostrará fuera del contenedor.</p>
+  </div>
+
+  <div class="container hidden">
+    <p>Este es un texto que excede el tamaño del contenedor. El valor de overflow es 'hidden', por lo que el contenido que exceda los límites del contenedor será ocultado.</p>
+  </div>
+
+  <div class="container scroll">
+    <p>Este es un texto que excede el tamaño del contenedor. El valor de overflow es 'scroll', por lo que se mostrarán barras de desplazamiento para acceder al contenido que excede los límites del contenedor.</p>
+  </div>
+
+  <div class="container auto">
+    <p>Este es un texto que excede el tamaño del contenedor. El valor de overflow es 'auto', por lo que se mostrarán barras de desplazamiento solo si el contenido excede los límites del contenedor.</p>
+  </div>
+</body>
+</html>

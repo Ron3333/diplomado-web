@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layout con Float y Clear</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos del header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 20px 50px 20px;
+/*      overflow: hidden;*/
+    }
+
+    .logo {
+      float: left;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      float: right;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Estilos del main */
+    main {
+      padding: 20px;
+      overflow: hidden; 
+    }
+
+    .column-1 {
+      width: 20%;
+      float: left;
+      margin-right: 5%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      box-sizing: border-box;
+      
+    }
+
+    .column-2 {
+      width: 50%;
+      float: left;
+      margin-right: 5%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .column-3 {
+      width: 20%;
+      float: left;
+      margin-right: 0%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      box-sizing: border-box;
+     
+    }
+
+    .img{
+      width: 20%;
+      float: left;
+      margin-right: 5%;
+      padding: 2px ;
+      box-sizing: border-box;
+    }
+
+    .text{
+      width: 75%;
+      box-sizing: border-box;
+    }
+
+    
+
+    /* Estilos del footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      clear: both; /* Asegura que el footer esté debajo de los elementos flotantes */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Título del sitio web</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="column-1">
+      <h2>Columna 1</h2>
+      <p>Contenido de la primera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <p>Contenido de la primera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <p>Contenido de la primera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      . </p>
+    </div>
+
+    <div class="column-2">
+      <h2>Columna 2</h2>
+      <p>Contenido de la segunda columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Contenido de la segunda columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Contenido de la segunda columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Contenido de la segunda columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Contenido de la segunda columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Contenido de la segunda columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Contenido de la segunda columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="img">
+         <img src="perro.webp" width="130px">
+      </div>
+      <p> hola hola hola Contenido de la tercera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. hola hola hola Contenido de la tercera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+      <p style="clear: both; padding-top:20px; overflow:hidden;">hola hola hola Contenido de la tercera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. hola hola hola Contenido de la tercera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    </div>
+
+    <div class="column-3">
+      <h2>Columna 3</h2>
+      <p>Contenido de la tercera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Contenido de la tercera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Contenido de la tercera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Título del sitio web. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

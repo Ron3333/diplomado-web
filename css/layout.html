@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layout con Float y Clear</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos del header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 20px 50px 20px;
+/*      overflow: hidden;*/
+    }
+
+    .logo {
+      float: left;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      float: right;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Estilos del main */
+    main {
+      padding: 20px;
+      overflow: hidden; 
+    }
+
+    .column {
+      width: 30%;
+      float: left;
+      margin-right: 5%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .column:last-child {
+      margin-right: 0;
+    }
+
+    /* Estilos del footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      clear: both; /* Asegura que el footer esté debajo de los elementos flotantes */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Título del sitio web</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="column">
+      <h2>Columna 1</h2>
+      <p>Contenido de la primera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      . </p>
+    </div>
+
+    <div class="column">
+      <h2>Columna 2</h2>
+      <p>Contenido de la segunda columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="column">
+      <h2>Columna 3</h2>
+      <p>Contenido de la tercera columna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Título del sitio web. Todos los derechos reservados.</p>
+  </footer>
+
+<!-- 
+  La propiedad overflow: hidden; en el código del header tiene dos propósitos principales:
+
+  1-Contener el desbordamiento horizontal: Cuando se utilizan elementos con float: left; para crear un diseño de columnas, a veces puede ocurrir un desbordamiento horizontal si el contenido de las columnas excede el ancho disponible del header. Al aplicar overflow: hidden; al header, se oculta cualquier contenido que se salga de los límites del contenedor, evitando así problemas de diseño.
+
+  2-Solucionar el problema de altura colapsada: Cuando se utilizan elementos flotantes (float: left;), el contenedor padre (en este caso, el header) no reconoce automáticamente la altura de sus hijos flotantes. Esto puede hacer que el header se colapse y no ocupe la altura esperada. Al aplicar overflow: hidden;, se fuerza al header a tener en cuenta la altura de sus hijos flotantes, evitando así el colapso del contenedor.
+  En resumen, overflow: hidden; en el header:
+
+  Oculta cualquier contenido que se desborde horizontalmente, manteniendo el diseño limpio y ordenado.
+  Soluciona el problema de la altura colapsada del header, asegurándose de que el contenedor abarque correctamente la altura de sus hijos flotantes.
+   -->
+
+</body>
+</html>

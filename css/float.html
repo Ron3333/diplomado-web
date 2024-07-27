@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: #f1f1f1;
+      margin: 10px;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    .clear {
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="box left">Caja flotante a la izquierda</div>
+  <div class="box right">Caja flotante a la derecha</div>
+  <p>Este es un párrafo de texto que se colocará a la derecha y a la izquierda de las cajas flotantes.</p>
+  <div class="clear"></div>
+  <p>Este es otro párrafo de texto que está debajo de las cajas flotantes.</p>
+
+  <!-- 
+  La propiedad float en CSS se utiliza para posicionar y alinear elementos a la izquierda o a la derecha dentro de su contenedor. Esto permite que otros elementos se coloquen a su alrededor. 
+
+  En este ejemplo, tenemos tres cajas (div) con la clase box. Las dos primeras cajas tienen las clases left y right respectivamente, lo que significa que se colocarán a la izquierda y a la derecha del contenedor.
+
+  El párrafo de texto que sigue a las cajas flotantes se ajustará alrededor de ellas, ya que los elementos con float se sacan del flujo normal del documento.
+
+  Para asegurarnos de que el siguiente párrafo se coloque debajo de las cajas flotantes, hemos agregado un div con la clase clear, que limpia el efecto del float y permite que el siguiente elemento se coloque correctamente.
+-->
+
+
+</body>
+</html>
