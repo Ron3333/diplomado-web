@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Website Template</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styles */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      /*100vh: "vh" significa "viewport height" (altura del viewport). 100vh equivale al 100% de la altura total del viewport. Esto asegura que el elemento ocupe al menos toda la altura visible del navegador.*/
+
+    }
+
+    /* Header styles */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Navigation menu styles */
+    nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Main content area styles */
+    main {
+      flex-grow: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Section styles */
+    section {
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Header content -->
+    <h1>Flexbox Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Main content area -->
+    <section>
+      <h2>Welcome to our Flexbox Website</h2>
+      <p>This website is built using the powerful Flexbox layout system. Flexbox allows us to easily create responsive and dynamic layouts.</p>
+    </section>
+
+    <section>
+      <h2>Why Use Flexbox?</h2>
+      <ul>
+        <li>Easy to align and distribute elements within a container</li>
+        <li>Flexible and adaptable to different screen sizes</li>
+        <li>Simplifies the creation of complex layouts</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Flexbox in Action</h2>
+      <p>Check out the source code of this page to see how Flexbox is used to create the layout.</p>
+    </section>
+    
+
+  </main>
+
+  <footer>
+    <!-- Footer content -->
+    <p>&copy; 2023 Flexbox Website. All rights reserved.</p>
+  </footer>
+
+<!--   Comentarios sobre la implementación:
+
+  Se utiliza Flexbox en el body para crear una disposición vertical de los elementos (header, main content, footer).
+  El header y footer usan Flexbox para alinear y distribuir sus elementos internos.
+  El main content area usa Flexbox para centrar verticalmente su contenido.
+  Cada section dentro del main content area usa Flexbox para alinear su contenido de forma centrada.
+  Se han aplicado estilos básicos, como colores, tipografía y márgenes, para mejorar la apariencia de la plantilla.
+  La plantilla es responsiva y se adapta a diferentes tamaños de pantalla gracias a las propiedades de Flexbox.
+   -->
+
+</body>
+</html>

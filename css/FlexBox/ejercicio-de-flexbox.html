@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EJERCICO DE FLEXBOX</title>
+</head>
+<style type="text/css">
+
+	body {
+		font-size: 2em;
+		font-family: sans-serif;
+		color: #ddd;
+		}
+	article {
+		background-color: #9ef;
+		width: 300px;
+		margin: 5px;
+		padding: 3px;
+		
+    }
+
+    section {
+      display: flex;
+      flex-direction: row;
+
+      flex-wrap: wrap;
+    }
+
+    .flex-container {
+		display: flex;
+		flex-direction: column-reverse;
+		margin-top: 50px;
+	}
+
+	.item {
+		background-color: #369;
+		margin: 2px;
+		padding: 5px;
+		flex-grow: 1;
+	}
+
+
+
+
+</style>
+<body>
+
+	<section>
+		<article>1</article>
+		<article>2</article>
+		<article>3</article>
+		<article>4</article>
+		<article>5</article>
+	</section>
+
+	<div class="flex-container">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+	</div>
+
+</body>
+</html>

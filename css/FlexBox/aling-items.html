@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flexbox align-content</title>
+	
+</head>
+<body>
+		<div style="display: flex; border: 2px solid ; height: 200px; align-items: flex-start; flex-grow: 1;">
+		  <div style="background-color: #6495ED; padding: 10px; align-self: center;">Item 1</div>
+		  <div style="background-color: #FFA07A; padding: 10px;">Item 2</div>
+		  <div style="background-color: #90EE90; padding: 10px; flex-grow: 2;">Item 3</div>
+		</div>
+
+		<div style="display: flex; border: 2px solid; height: 200px; align-items: center;">
+		  <div style="background-color: #6495ED; padding: 10px;">Item 1</div>
+		  <div style="background-color: #FFA07A; padding: 10px;">Item 2</div>
+		  <div style="background-color: #90EE90; padding: 10px;">Item 3</div>
+		</div>
+
+		<div style="display: flex; border: 2px solid ; height: 200px; align-items: flex-end;">
+		  <div style="background-color: #6495ED; padding: 10px;">Item 1</div>
+		  <div style="background-color: #FFA07A; padding: 10px;">Item 2</div>
+		  <div style="background-color: #90EE90; padding: 10px;">Item 3</div>
+		</div>
+
+		<div style="display: flex; border: 2px solid ; height: 200px; align-items: stretch;">
+		  <div style="background-color: #6495ED; padding: 10px;">Item 1</div>
+		  <div style="background-color: #FFA07A; padding: 10px;">Item 2</div>
+		  <div style="background-color: #90EE90; padding: 10px;">Item 3</div>
+		</div>
+
+		<div style="display: flex;  border: 2px solid ; height: 200px; align-items: baseline;">
+		  <div style="background-color: #6495ED; font-size: 16px; padding: 10px;">Item 1</div>
+		  <div style="background-color: #FFA07A; font-size: 24px; padding: 10px;">Item 2</div>
+		  <div style="background-color: #90EE90; font-size: 20px; padding: 10px;">Item 3</div>
+		</div>
+
+
+	<!-- 
+	    ¿por qué el align-items: center funciona incluso en un contenedor Flexbox de una sola línea?
+
+		La explicación es la siguiente:
+
+		Cuando el contenedor Flexbox tiene una sola línea (porque flex-wrap es nowrap por defecto), align-items aún tiene efecto, pero su comportamiento es ligeramente diferente.
+
+		En un contenedor de una sola línea, align-items alinea los elementos flex a lo largo del eje transversal (vertical), pero no tiene en cuenta la altura de los elementos. En su lugar, ajusta la posición de los elementos según el valor de align-items y usa la altura del elemento más alto como referencia.
+
+		Por ejemplo, en el caso de align-items: center, los elementos se centrarán verticalmente dentro del contenedor, aun cuando su altura individual sea diferente.
+
+		Entonces, en resumen, el align-items: center funciona incluso en un contenedor Flexbox de una sola línea, centrando verticalmente los elementos dentro del contenedor, usando la altura del elemento más alto como referencia. 
+	-->
+
+		
+		<div style="display: flex; border: 2px solid; height: 400px; align-items: center;">
+		  <div style="background-color: #6495ED; padding: 100px; height: 50px;">Item 1</div>
+		  <div style="background-color: #FFA07A; padding: 100px; height: 100px;">Item 2</div>
+		  <div style="background-color: #90EE90; padding: 100px; height: 80px;">Item 3</div>
+		</div>
+
+		<!-- 
+		En este ejemplo, tenemos un contenedor Flexbox con display: flex y height: 200px. Dentro del contenedor, tenemos tres elementos con diferentes alturas: 50px, 100px y 80px.
+
+		Dado que no hemos establecido flex-wrap, el comportamiento predeterminado es nowrap, lo que significa que los elementos se mantendrán en una sola línea.
+
+		Ahora bien, observemos el efecto de align-items: center:
+
+		A pesar de que los elementos tienen diferentes alturas, se centran verticalmente dentro del contenedor.
+		El contenedor Flexbox usa la altura del elemento más alto (100px) como referencia para alinear los demás elementos.
+		Los elementos más cortos (50px y 80px) se centran dentro de este espacio de 100px.
+		Esto demuestra que align-items sigue funcionando en un contenedor Flexbox de una sola línea, pero su comportamiento es ligeramente diferente: en lugar de tener en cuenta la altura individual de cada elemento, usa la altura del elemento más alto como referencia para alinear los demás.
+
+		-->
+
+
+		<div style="display: flex; border: 2px solid; height: 600px; flex-wrap: wrap; align-items: center;">
+		  <div style="background-color: #6495ED; padding: 100px; height: 50px;">Item 1</div>
+		  <div style="background-color: #FFA07A; padding: 100px; height: 100px;">Item 2</div>
+		  <div style="background-color: #90EE90; padding: 100px; height: 80px;">Item 3</div>
+		  <div style="background-color: #FFD700; padding: 100px; height: 60px;">Item 4</div>
+		  <div style="background-color: #FF6347; padding: 100px; height: 90px;">Item 5</div>
+		  <div style="background-color: #6495ED; padding: 100px; height: 50px;">Item 1</div>
+		  <div style="background-color: #FFA07A; padding: 100px; height: 100px;">Item 2</div>
+		  <div style="background-color: #90EE90; padding: 100px; height: 80px;">Item 3</div>
+		  <div style="background-color: #FFD700; padding: 100px; height: 60px;">Item 4</div>
+		  <div style="background-color: #FF6347; padding: 100px; height: 90px;">Item 5</div>
+		</div>
+
+<!-- 
+		En este caso, tenemos un contenedor Flexbox con height: 200px y flex-wrap: wrap. Dentro del contenedor, tenemos cinco elementos con diferentes alturas: 50px, 100px, 80px, 60px y 90px.
+
+		Ahora, observemos el efecto de align-items: center:
+
+		A diferencia del ejemplo anterior, donde el contenedor solo tenía una línea, ahora los elementos se envuelven en múltiples líneas.
+		Cada línea Flexbox se alinea de forma independiente según el valor de align-items.
+		En este caso, con align-items: center, cada línea de elementos se centra verticalmente dentro del espacio disponible en el contenedor.
+		La altura de cada línea se determina por el elemento más alto de esa línea.
+		Los espacios vacíos en la parte superior y inferior del contenedor se distribuyen de manera uniforme, lo que hace que los elementos se centren verticalmente.
+		Entonces, en resumen, cuando el contenedor Flexbox tiene flex-wrap: wrap, align-items sigue funcionando, pero ahora se aplica a cada línea por separado, en lugar de usar la altura del elemento más alto como referencia para todo el contenedor.
+
+		¿Quedó claro el comportamiento de align-items con flex-wrap: wrap? Si tienes alguna otra pregunta, no dudes en hacerla.
+
+ -->
+
+       
+
+		<div style="display: flex; border: 2px solid;  height: 200px; flex-wrap: wrap; align-items: flex-start;">
+		  <div style="background-color: #6495ED; padding: 10px;">Item 1</div>
+		  <div style="background-color: #FFA07A; padding: 10px;">Item 2</div>
+		  <div style="background-color: #90EE90; padding: 10px;">Item 3</div>
+		  <div style="background-color: #FFD700; padding: 10px;">Item 4</div>
+		  <div style="background-color: #FF6347; padding: 10px;">Item 5</div>
+		</div>
+
+		<div style="display: flex; height: 200px; flex-wrap: wrap; align-items: center;">
+		  <div style="background-color: #6495ED; padding: 10px;">Item 1</div>
+		  <div style="background-color: #FFA07A; padding: 10px;">Item 2</div>
+		  <div style="background-color: #90EE90; padding: 10px;">Item 3</div>
+		  <div style="background-color: #FFD700; padding: 10px;">Item 4</div>
+		  <div style="background-color: #FF6347; padding: 10px;">Item 5</div>
+		</div>
+
+
+
+		<div style="display: flex; border: 2px solid; height: 200px; flex-wrap: wrap; align-content: space-around;">
+  <div style="background-color: #6495ED; padding: 10px; height: 100px;">Item 1</div>
+  <div style="background-color: #FFA07A; padding: 10px; height: 120px;">Item 2</div>
+  <div style="background-color: #90EE90; padding: 10px; height: 150px;">Item 3</div>
+  <div style="background-color: #FFD700; padding: 10px; height: 80px;">Item 4</div>
+  <div style="background-color: #FF6347; padding: 10px; height: 130px;">Item 5</div>
+</div>
+
+</div>
+</body>
+</html>

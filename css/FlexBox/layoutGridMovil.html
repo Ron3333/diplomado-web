@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout con Header, Asides, Main y Footer</title>
+  <style>
+    /* Estilos base */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 24px;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    /* Main content */
+    main {
+      display: flex;
+      flex: 1;
+    }
+
+    aside {
+      background-color: #f1f1f1;
+      padding: 20px;
+      width: 200px;
+    }
+
+    .content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+    }
+
+    .left-aside,
+    .right-aside {
+      background-color: #f1f1f1;
+      padding: 20px;
+      width: 200px;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Media queries */
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+      .content {
+        flex-direction: column;
+      }
+
+      .left-aside,
+      .right-aside {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">Logo</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <aside class="left-aside">
+        <h2>Left Sidebar</h2>
+        <p>This is the left sidebar content.</p>
+      </aside>
+      <div class="content">
+        <div class="main-content">
+          <h1>Welcome to our website</h1>
+          <p>This is the main content area.</p>
+          
+  
+        </div>
+      </div>
+      <aside class="right-aside">
+          <h2>Right Sidebar</h2>
+          <p>This is the right sidebar content.</p>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

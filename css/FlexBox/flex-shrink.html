@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de flex-shrink</title>
+  <style>
+    .container {
+      display: flex;
+      
+      border: 1px solid #ccc;
+    }
+
+    .item1 {
+      background-color: #6495ED;
+      padding: 10px;
+      flex-grow: 1;
+    }
+
+    .item2 {
+      background-color: #FFA07A;
+      padding: 10px;
+      flex-shrink: 2;
+    }
+
+    .item3 {
+      background-color: #90EE90;
+      padding: 10px;
+      flex-grow: 2;
+    }
+
+    .flex-continer{
+      display: flex;
+      background-color: gray;
+    }
+
+    .flex-continer div{
+      background-color: blue;
+      margin: 5px;
+      width: 100px;
+      color: white;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item1">Item 1</div>
+    <div class="item2">Item 2</div>
+    <div class="item3">Item 3</div>
+  </div>
+
+  <div class="flex-continer">
+      <div>1</div>
+      <div>2</div>
+      <div style="flex-shrink: 3;">3</div>
+      <div>4</div>
+      <div style="flex-shrink: 0">5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+   <!--    <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+      <div>15</div>
+      <div>16</div>
+      <div>17</div>
+      <div>18</div>
+      <div>19</div>
+      <div>20</div>
+      <div>21</div>
+      <div>22</div>  -->
+  </div>
+
+</body>
+</html>
+
+<!-- flex-basis  
+Define   el  tamaño  por   defecto   (de   base)   que   tendrán   los   ítems   antes   de 
+aplicarle  la  distribución  de  espacio.  Generalmente,   se  aplica  un  tamaño 
+(unidades,   porcentajes,  etc...),  pero  también   se  puede   aplicar   la  palabra  
+clave  content   que   ajusta  automáticamente   el  tamaño  al  contenido   del  
+ítem, que es  su  valor por defecto.  

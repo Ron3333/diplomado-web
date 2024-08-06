@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Flexbox 2</title>
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Estilos del encabezado */
+    header  {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      justify-content:space-between ;
+      align-items: center;
+    }
+
+     nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+     nav ul li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Estilos del área principal */
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+
+    }
+
+    aside {
+      flex: 0 0 150px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .content {
+      flex: 1 1 600px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      margin: 10px;
+    }
+
+    aside img, .content img {
+      max-width: 100%;
+      /*Esta propiedad indica que la imagen no debe
+      ser más ancha que su contenedor. Esto evita
+      que la imagen se desborde del elemento que la 
+      contiene.*/
+      height: auto;
+    }
+
+    .content img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+
+    /* Estilos del pie de página */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>logo</h2> 
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <aside>
+      <h2>Aside 1</h2>
+      <img src="https://via.placeholder.com/200x150" alt="Imagen 1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </aside>
+    <div class="content">
+      <h2>Main Content</h2>
+      <img src="https://via.placeholder.com/600x400" alt="Imagen 2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo magna vel magna tincidunt, vel commodo magna tincidunt.</p>
+    </div>
+    <aside>
+      <h2>Aside 2</h2>
+      <img src="https://via.placeholder.com/200x150" alt="Imagen 3">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2024  Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

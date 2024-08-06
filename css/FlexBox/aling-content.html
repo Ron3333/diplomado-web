@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flexbox align-content</title>
+	<style type="text/css">
+
+       /* START Contenedor	flex*/
+		.box{
+			display:	flex;
+			/*flex-direction:	row;
+			flex-wrap:	wrap;	*/
+			flex-flow:	row wrap;	
+			align-content: space-around  ;
+			justify-content: space-around;
+			height: 800px;
+			border: 2px solid ;
+
+		}
+
+		/* START Contenedor	flex*/
+
+		.caja{
+			width: 330px;
+			height: 200px;
+			margin-right: 5px;
+			border:  2px solid green ;
+		}
+
+
+
+	</style>
+</head>
+<body>
+		<div class="box">	
+			<div class="caja">Uno</div>	
+			<div class="caja">Dos</div>	
+			<div class="caja">tres</div>	
+			<div class="caja">cuatro	
+				<br>	
+				<br>	
+				<br>	
+				<br>	
+				<br>	
+				<br>	
+				<br>	
+			
+					
+			</div>	
+	    </div>
+</body>
+</html>
