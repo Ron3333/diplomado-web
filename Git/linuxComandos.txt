@@ -1,0 +1,50 @@
+Comandos básicos de Linux:
+
+1. **cd (Change Directory):**
+   - Descripción: Permite cambiar de directorio.
+   - Ejemplos:
+     - `cd /home/usuario`: Cambia al directorio `/home/usuario`.
+     - `cd ..`: Navega al directorio padre.
+
+2. **rm (Remove):**
+   - Descripción: Elimina archivos o directorios.
+   - Ejemplos:
+     - `rm archivo.txt`: Elimina el archivo `archivo.txt`.
+     - `rm -r directorio`: Elimina de forma recursiva el directorio `directorio` y todo su contenido.
+     - `rm -f archivo.txt`: Elimina el archivo `archivo.txt` forzosamente, incluso si está protegido.
+
+3. **pwd (Print Working Directory):**
+   - Descripción: Muestra la ruta del directorio de trabajo actual.
+   - Ejemplo:
+     - `pwd`: Imprime la ruta completa del directorio de trabajo actual.
+
+4. **cp (Copy):**
+   - Descripción: Copia archivos o directorios.
+   - Ejemplos:
+     - `cp archivo.txt /ruta/destino/`: Copia el archivo `archivo.txt` a la ruta de destino.
+     - `cp -r directorio/ /ruta/destino/`: Copia de forma recursiva el directorio `directorio` a la ruta de destino.
+
+5. **mv (Move):**
+   - Descripción: Mueve o renombra archivos o directorios.
+   - Ejemplos:
+     - `mv archivo.txt /ruta/destino/`: Mueve el archivo `archivo.txt` a la ruta de destino.
+     - `mv archivo.txt nuevo_nombre.txt`: Renombra el archivo `archivo.txt` a `nuevo_nombre.txt`.
+
+6. **mkdir (Make Directory):**
+   - Descripción: Crea un nuevo directorio.
+   - Ejemplos:
+     - `mkdir nuevo_directorio`: Crea un nuevo directorio llamado `nuevo_directorio`.
+     
+7. **cat (Concatenate):**
+   - Descripción: Muestra el contenido de un archivo, o concatena varios archivos.
+   - Ejemplos:
+     - `cat archivo.txt`: Imprime el contenido del archivo `archivo.txt` en la terminal.
+     - `cat archivo1.txt archivo2.txt > archivo_combinado.txt`: Combina el contenido de `archivo1.txt` y `archivo2.txt` en un nuevo archivo `archivo_combinado.txt`.
+
+8. **nano (Nano Text Editor):**
+   - Descripción: Editor de texto simple y sencillo de usar.
+   - Ejemplos:
+     - `nano archivo.txt`: Abre el archivo `archivo.txt` en el editor nano.
+     - Dentro de nano, puedes editar el archivo, guardar los cambios (Ctrl+O) y salir (Ctrl+X).
+
+Estos son algunos de los comandos básicos de Linux más comunes. Recuerda que puedes obtener más información sobre cada comando utilizando el comando `man` seguido del nombre del comando, por ejemplo: `man cd`.

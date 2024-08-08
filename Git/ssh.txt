@@ -1,0 +1,62 @@
+Bien, aquí están los pasos para generar una clave pública y privada usando SSH en un sistema operativo Windows:
+
+1. Abre la consola de comandos (Command Prompt) o PowerShell en tu sistema Windows.
+
+2. Ejecuta el siguiente comando para generar un par de claves RSA:
+
+   ```
+   ssh-keygen -t rsa
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+   1. ssh-keygen: Este es el comando principal para generar un par de claves pública-privada para autenticación SSH.
+   2. -t rsa: Especifica el tipo de algoritmo criptográfico a utilizar para generar las claves. En este caso, se usa el algoritmo RSA.
+   3. -b 4096: Indica el tamaño de la clave en bits. En este ejemplo, se genera una clave de 4096 bits, que es considerada una clave más segura que la clave predeterminada de 2048 bits.
+   4. -C "your_email@example.com": Este es un campo de comentario que se agrega a la clave pública generada. Normalmente se utiliza el correo electrónico del usuario que está generando la clave, pero puede ser cualquier texto descriptivo.
+   ```
+
+   Este comando está disponible si tienes instalado el cliente SSH de Windows, como Git Bash o Windows Subsystem for Linux (WSL).
+
+3. Sigue las instrucciones en pantalla:
+   - Proporciona la ubicación donde deseas guardar las claves (presiona Enter para usar la ubicación predeterminada).
+   - Ingresa una frase de contraseña (opcional) para proteger la clave privada. Si no quieres una frase de contraseña, simplemente presiona Enter.
+
+4. Una vez finalizado el proceso, verás dos archivos generados en la ubicación especificada:
+   - `id_rsa`: Esta es tu clave privada, que debes mantener en secreto y segura.
+   - `id_rsa.pub`: Esta es tu clave pública, que puedes compartir con otros.
+
+Ejemplo:
+
+```
+C:\Users\tuusuario>ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\tuusuario/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in C:\Users\tuusuario\.ssh\id_rsa.
+Your public key has been saved in C:\Users\tuusuario\.ssh\id_rsa.pub.
+The key fingerprint is:
+SHA256:abcdefghijklmnopqrstuvwxyz1234567890 tuusuario@tuhost
+The key's randomart image is:
++---[RSA 3072]----+
+|        ..o+.o.o |
+|       . o.o+o.+ |
+|        o. =..o. |
+|         . = + o |
+|        S   * o  |
+|         . o o   |
+|            .    |
+|                 |
+|                 |
++----[SHA256]-----+
+```
+
+Después de generar las claves, puedes usar la clave pública (`id_rsa.pub`) para configurar la autenticación SSH en otros servidores o sistemas. La clave privada (`id_rsa`) se utilizará para autenticarte y cifrar/descifrar información de manera segura.
+
+Recuerda que, en Windows, la ubicación predeterminada de las claves SSH suele ser `C:\Users\tuusuario\.ssh`.
+
+Para conectarse a un servidor remoto.
+
+ssh username@remote_host
+
+
+
