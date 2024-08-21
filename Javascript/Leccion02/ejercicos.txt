@@ -1,0 +1,9 @@
+Ejercicio:
+
+Crea las siguientes variables utilizando let y const:
+
+Declara una variable nombre con let y asígnale tu nombre.
+Declara una variable edad con let y asígnale tu edad.
+Declara una variable PI con const y asígnale el valor de pi (3.14159).
+Declara una variable estaLloviendo con let y asígnale un valor booleano que indique si está lloviendo o no.
+Declara una variable horaActual con let y asígnale la hora actual en formato de 24 horas (por ejemplo, 15:30).
