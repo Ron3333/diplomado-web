@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transitions Examples</title>
+  <style>
+    /* Background Color Transition */
+    .background-color {
+      width: 200px;
+      height: 200px;
+      background-color: #007bff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      transition: background-color 0.5s ease-in-out;
+    }
+    .background-color:hover {
+      background-color: #6c757d;
+    }
+
+    /* Size Transition */
+    .size {
+      width: 200px;
+      height: 200px;
+      background-color: #28a745;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+    .size:hover {
+      width: 300px;
+      height: 300px;
+    }
+
+    /* Opacity Transition */
+    .opacity {
+      width: 200px;
+      height: 200px;
+      background-color: #ffc107;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .opacity:hover {
+      opacity: 0.5;
+    }
+
+    /* Transformation Transition */
+    .transformation {
+      width: 200px;
+      height: 200px;
+      background-color: #dc3545;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      transition: transform 0.5s ease-in-out;
+    }
+    .transformation:hover {
+      transform: rotate(45deg) scale(1.2);
+    }
+
+    /* Common Styles */
+    .example {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      gap: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="example">
+    <div class="background-color">
+      Background Color
+    </div>
+    <div class="size">
+      Size
+    </div>
+    <div class="opacity">
+      Opacity
+    </div>
+    <div class="transformation">
+      Transformation
+    </div>
+  </div>
+</body>
+</html>

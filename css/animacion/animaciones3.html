@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transitions Examples</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .example {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .transition-box {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      color: white;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .background-color {
+      background-color: #007bff;
+    }
+    .background-color:hover {
+      background-color: #6c757d;
+    }
+
+    .size {
+      background-color: #28a745;
+    }
+    .size:hover {
+      width: 300px;
+      height: 300px;
+    }
+
+    .opacity {
+      background-color: #ffc107;
+      opacity: 1;
+    }
+    .opacity:hover {
+      opacity: 0.5;
+    }
+
+    .transformation {
+      background-color: #dc3545;
+    }
+    .transformation:hover {
+      transform: rotate(45deg) scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="example">
+    <div class="transition-box background-color">
+      Background Color
+    </div>
+    <div class="transition-box size">
+      Size
+    </div>
+    <div class="transition-box opacity">
+      Opacity
+    </div>
+    <div class="transition-box transformation">
+      Transformation
+    </div>
+  </div>
+</body>
+</html>
