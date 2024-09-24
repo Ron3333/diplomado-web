@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manejo del DOM </title>
+</head>
+<body>
+
+<!-- 	<h1 id="titulo" onmouseover="rojo(this)"  onmouseout="azul(this)">
+	   Manejo del DOM javascript
+    </h1> -->
+
+    <!-- <h1 id="titulo" onmousedown="rojo(this)"  onmouseup="azul(this)">
+	   Manejo del DOM javascript
+    </h1> -->
+
+     <h1 id="titulo" onmousedown="rojo(this)"  onmouseup="azul(this)" onclick="verde(this)">
+	   Manejo del DOM javascript
+    </h1>
+
+	<input type="text"  onchange="convertir(this)">
+
+	<script type="text/javascript">
+
+		function convertir(nombreInput){
+			nombreInput.value = nombreInput.value.toUpperCase();
+		}
+
+		function rojo(titulo){
+			titulo.style.color = 'red';
+			console.log("cambio a rojo onmousedown ");
+		}
+
+		function azul(titulo){
+			titulo.style.color = 'blue';
+			console.log("cambio a azul onmouseup ");
+		}
+
+		function verde(titulo){
+			titulo.style.color = 'green';
+			console.log("cambio a verde onclick ");
+		}
+
+	</script>
+</body>
+</html>

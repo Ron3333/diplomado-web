@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Dom</title>
+</head>
+<body>
+    <h2>Acceder a hijos/padres de un elemento</h2>
+    <div id="container">
+        <h3>Ejercicio con JavaScript</h3>
+        <p>Este es un párrafo dentro del contenedor.</p>
+        <ul id="my-list">
+          <li>Elemento de lista 1</li>
+          <li>Elemento de lista 2</li>
+          <li>Elemento de lista 3</li>
+        </ul>
+      </div>
+
+    <script>
+       // Obtener el elemento con el ID 'my-list'
+        var elem = document.getElementById('my-list');
+
+        // Obtener los hijos del elemento
+        var hijos = elem.childNodes;
+
+        // Mostrar los hijos en la consola
+        console.log('Hijos del elemento:', hijos);
+
+        
+        for (var i = 0; i < hijos.length; i++) {
+             console.log(hijos[i].textContent );
+        }
+
+        // Obtener el nodo padre del elemento
+        var padre = elem.parentNode;
+
+        // Mostrar el nodo padre en la consola
+        console.log('Nodo padre del elemento:', padre);
+
+        let  hijosArray = Array.from(hijos);
+        console.log(hijosArray);
+
+        hijosArray.forEach(function(hijo) {
+            console.log(hijo.nodeName);
+        });
+
+/* 
+        hijos.length te permite obtener el número de nodos hijos.
+        hijos[i].nodeValue te permite acceder al valor de cada nodo hijo. Ten en cuenta que esto incluirá los nodos de texto, por lo que deberás comprobar si es un elemento o no.
+        elem.children te dará solo los elementos hijos, evitando los nodos de texto.
+        Array.from(hijos) convierte la colección de hijos en un array para poder usar el método forEach.
+        hijo.textContent te permite obtener el texto del elemento hijo.
+ */
+    </script>
+</body>
+</html>

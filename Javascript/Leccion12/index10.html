@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio de Creación de Elementos</title>
+</head>
+<body>
+  <div id="container">
+    <h1>Ejercicio de Creación de Elementos</h1>
+  </div>
+
+  <script>
+    // Para crear elementos llamamos a createElement con el nombre del elemento
+    let nuevoH1 = document.createElement('h1');
+    let nuevoParrafo = document.createElement('p');
+
+    // Crear nodos de texto para un elemento
+    let textoH1 = document.createTextNode('Hola mundo!');
+    let textoParrafo = document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+
+    // Añadir el texto a los elementos
+    nuevoH1.appendChild(textoH1);
+    nuevoParrafo.appendChild(textoParrafo);
+
+    // También podemos asignar directamente el valor a la propiedad innerHTML
+    // nuevoH1.innerHTML = 'Hola mundo!';
+    // nuevoParrafo.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+    // Obtener el elemento contenedor
+    let contenedor = document.getElementById('container');
+
+    // Añadir los nuevos elementos al contenedor
+    
+    contenedor.appendChild(nuevoH1);
+    contenedor.appendChild(nuevoParrafo);
+  
+
+   /*  Creamos un nuevo elemento <h1> y un nuevo elemento <p> utilizando document.createElement().
+    Creamos nodos de texto para cada elemento utilizando document.createTextNode().
+    Añadimos los nodos de texto a los elementos utilizando elemento.appendChild().
+    También se muestra cómo se puede asignar directamente el texto utilizando elemento.innerHTML.
+    Obtenemos el elemento contenedor con document.getElementById('container').
+    Finalmente, añadimos los nuevos elementos al contenedor utilizando contenedor.appendChild().
+    Cuando abras esta página en un navegador, verás un título <h1> y un párrafo <p> que hemos creado dinámicamente
+    con JavaScript.
+
+    Recuerda que los elementos creados dinámicamente solo existen en memoria hasta que los añades a un elemento 
+    del DOM. Una vez añadidos, serán visibles en la página. */
+
+    let nuevoH2 = document.createElement('h2');
+    let textoH2 = document.createTextNode('Hola mundo H2 !');
+    nuevoH2.appendChild(textoH2);
+    let padre = contenedor.parentNode;
+    padre.insertBefore(nuevoH2,contenedor);
+
+    contenedor.insertAdjacentHTML('beforebegin', '<div><p>un parrafo nuevo.</p></div>');
+
+   /*  beforebegin - El nuevo HTML es insertado justo antes del elemento, a la misma altura (hermano).
+    afterbegin - El nuevo HTML se inserta dentro del elemento, antes del primer hijo.
+    beforeend - El nuevo HTML se inserta dentro del elemento, después del último hijo.
+    afterend - El nuevo HTML es insertado justo después del elemento, a la misma altura (hermano).
+   */
+
+  </script>
+</body>
+</html>

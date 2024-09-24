@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manejo del DOM </title>
+</head>
+<body onload="entrar()">
+
+	<!-- <h1 onclick="this.innerHTML='Nuevo Titulo' " >Manejo del DOM javascript</h1> -->
+	<!-- <h1 onclick="cambiarTexto(this)" >Manejo del DOM javascript</h1> -->
+	<h1 id="titulo">Manejo del DOM javascript</h1>
+	<div id="mostrar"></div>
+	<br>
+	<div id="cookie"></div>
+	<br>
+
+
+	<script type="text/javascript">
+
+
+		// function cambiarTexto(titulo){
+		// 	console.log(titulo);
+		// 	console.log(titulo.innerHTML);
+		// 	titulo.innerHTML = 'Cambiamos el Titulo';
+		// }
+
+		document.getElementById("titulo").onclick = cambiarTexto;
+
+		function cambiarTexto(){
+		 	
+		 	document.getElementById("titulo").innerHTML = 'Cambiamos el Titulo';
+		 	document.getElementById("mostrar").innerHTML = 'Nuevo Titulo';
+
+		}
+
+		function entrar(){
+			alert("Cargado la página");
+			let texto = "";
+			if(navigator.cookieEnabled){
+				texto = " las cookie estan habilitadas"
+			}else {
+				texto = " las cookie estan inhabilitadas"
+			}
+
+			document.getElementById("cookie").innerHTML = texto ;
+
+		}
+
+
+
+
+	</script>
+</body>
+</html>

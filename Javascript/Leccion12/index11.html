@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio de Manipulación de Clases</title>
+  <style>
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: #ccc;
+      margin: 20px;
+    }
+
+    .red {
+      background-color: #ff0000;
+    }
+
+    .green {
+      background-color: #00ff00;
+    }
+
+    .blue {
+      background-color: #0000ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejercicio de Manipulación de Clases</h1>
+
+  <div id="box1" class="box"></div>
+  <div id="box2" class="box"></div>
+  <div id="box3" class="box"></div>
+  <div id="box4" class="box"></div>
+
+  <button id="btn-add">Añadir clase</button>
+  <button id="btn-remove">Eliminar clase</button>
+  <button id="btn-toggle">Alternar clase</button>
+
+  <script>
+    // Tomar los elementos de la página
+    var box1 = document.getElementById('box1');
+    var box2 = document.getElementById('box2');
+    var box3 = document.getElementById('box3');
+    var box4 = document.getElementById('box4');
+
+    var btnAdd = document.getElementById('btn-add');
+    var btnRemove = document.getElementById('btn-remove');
+    var btnToggle = document.getElementById('btn-toggle');
+
+    // Evento para añadir una clase
+    btnAdd.addEventListener('click', function() {
+      box1.classList.add('red');
+      box2.classList.add('green');
+      box3.classList.add('blue');
+      box4.classList.add('red', 'green', 'blue');
+    });
+
+    // Evento para eliminar una clase
+    btnRemove.addEventListener('click', function() {
+      box1.classList.remove('red');
+      box2.classList.remove('green');
+      box3.classList.remove('blue');
+      box4.classList.remove('red', 'green', 'blue');
+    });
+
+    // Evento para alternar una clase
+    btnToggle.addEventListener('click', function() {
+      box1.classList.toggle('green');
+      box2.classList.toggle('blue');
+      box3.classList.toggle('red');
+      box4.classList.toggle('red');
+    });
+
+    /* Tomamos un elemento
+    var cabecera = document.getElementById('cabecera');
+
+    elimina una clase del elemento
+    cabecera.classList.remove('foo');
+
+    Añade una clase si no existe
+    cabecera.classList.add('otra');
+
+    añade o elimina varias clases a la vez
+    cabecera.classList.add('foo', 'bar');
+    cabecera.classList.remove('foo', 'bar');
+
+    Si la clase existe la elimina, si no existe, la crea
+    cabecera.classList.toggle('visible');
+
+    Devuelve true si el elemento contiene esa clase
+    cabecera.classList.contains('foo'); */
+
+  </script>
+</body>
+</html>
