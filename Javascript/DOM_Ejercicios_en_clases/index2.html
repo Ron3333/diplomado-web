@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM 2</title>
+</head>
+<body>
+
+	<h1 id="uno">hola 1</h1>
+	<h1 id="dos"></h1>
+	<h1 id="tres">hola 3</h1>
+	<p class="azul"> Parrafo 1</p>
+	<p class="azul"> Parrafo 2</p>
+
+	<button onclick="accion()">CLICK</button>
+
+
+
+<script>
+
+  function accion(){
+		console.log("Evento accion");
+		let cabecera = document.getElementById('uno');
+		console.log(cabecera.innerHTML);
+
+		let cabecera_1 = document.getElementById('dos');
+		cabecera_1.innerHTML = "HOLA MUNDO DESDE AEP";
+
+		let todas = document.getElementsByTagName('h1');
+
+		for(let item of todas){
+			console.log("Items : "+item.innerHTML);
+		}
+
+		let elementos = document.querySelectorAll("p.azul");
+		 console.log("Cant Parrafos: "+elementos.length);
+
+		 for(let item of elementos){
+		 	  console.log("Items de parrafos : "+item.innerHTML);
+		 }
+	}
+	
+
+</script>
+</body>
+</html>

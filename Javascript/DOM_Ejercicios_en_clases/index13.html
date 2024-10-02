@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM Evento keyUp</title>
+	<style>
+		 textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        .contador {
+            font-weight: bold;
+        }
+        #error{
+        	color: red;
+        }
+	</style>
+</head>
+<body>
+	<h1>Contador de Caracteres en Textarea</h1>
+    <textarea id="texto" placeholder="Escribe aquí..." maxlength="10"></textarea>
+    <div class="contador">Cantidad de caracteres: <span id="cantidad">0</span></div>
+    <div id="error"></div>
+    <script>
+
+        let longitudMax = 20;
+    	let contador = document.getElementById("contador");
+    	let cantidad = document.getElementById("cantidad");
+        document.getElementById('texto').maxLength = longitudMax ;
+       
+    	document.getElementById("texto").addEventListener("keyup", (evento)=>{
+    		let letra = evento.target.value;
+    		letra = letra.substring(0, longitudMax);
+    		console.log(letra);
+    		cantidad.innerHTML = letra.length;
+    		
+    		if(letra.length >= longitudMax){
+    			document.getElementById("error").innerHTML = "Te pasaste";
+    		}
+    	})
+    </script>
+</body>
+</html>

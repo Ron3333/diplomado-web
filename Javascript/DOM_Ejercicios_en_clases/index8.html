@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manejo del DOM </title>
+</head>
+<body>
+
+
+     <h1 id="titulo">
+	   Manejo del DOM javascript
+    </h1>
+
+nombre: <input id="nombre"  type="text" name="nombre" onfocus="cambiarFondo(this)" onblur="regreesarFondo(this)">
+apellido: <input type="text"  onfocus="cambiarFondo(this)" onblur="regreesarFondo(this)">
+
+	
+	<script>
+
+		function cambiarFondo(elemento){
+			//document.getElementById("nombre").style.background="yellow";
+			elemento.style.background='yellow';
+			//document.getElementById('nombre').style.background='yellow';
+		}
+
+		function regreesarFondo(elemento){
+			elemento.style.background= 'white';
+		}
+
+	</script>
+</body>
+</html>

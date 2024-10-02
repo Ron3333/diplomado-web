@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM Atributos</title>
+</head>
+<body onload="entrar()">
+	<h1>Evento Onload</h1>
+	<h1 id ="cookie"></h1>
+
+<script>
+	
+	function entrar(){
+		alert("Cargado la página");
+		
+		let texto = "";
+		console.log(navigator.cookieEnabled);
+		if(navigator.cookieEnabled){
+			texto = " las cookie estan habilitadas"
+		}else {
+			texto = " las cookie estan inhabilitadas"
+		}
+		document.getElementById("cookie").innerHTML = texto ;
+	}
+
+</script>
+</body>
+</html>

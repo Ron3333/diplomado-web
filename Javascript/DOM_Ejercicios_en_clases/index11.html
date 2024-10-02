@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM delegaciòn de formulario</title>
+</head>
+<body>
+
+	<form id="forma">
+	    nombre: <input type="text" id="nombre">
+		<br><br>
+		apellido: <input type="text" id="apellido">	
+		<br><br>
+		edad: <input type="text" id="edad">	
+     </form>
+
+    <script>
+    	let forma = document.getElementById("forma");
+    	forma.addEventListener( "focus", (evento) => {
+    		evento.target.style.background = "yellow";}, true);
+
+		forma.addEventListener( "blur",  (evento) => {
+			evento.target.style.background = "white";
+		}, true);
+
+		// true como parametro de addEventListener se conoce como delegación de evento o parametro useCapture
+		// lo usamos para propagar de los elemento externo a los elementos mas interno
+
+    </script>
+
+</body>
+</html>

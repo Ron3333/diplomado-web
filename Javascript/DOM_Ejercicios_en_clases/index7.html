@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM </title>
+</head>
+<body>
+
+	<p onmouseover="mostrarMensaje()" onmouseout="ocultarMensaje()">Pasa el mouse sobre este texto</p>
+    <!-- <div id="mensaje">¡Hola! Este es un mensaje adicional.</div> -->
+    <img src="" id="mensaje" >
+    <br><br>
+
+     <!-- Evento  onchange  -->
+    <input type="text" value=""  onchange="convertir(this)">
+
+<script>
+	function mostrarMensaje() {
+        document.getElementById('mensaje').style.display = 'block';
+        document.getElementById('mensaje').src = 'zen.png'
+    }
+
+    function ocultarMensaje() {
+        document.getElementById('mensaje').style.display = 'none';
+        document.getElementById('mensaje').src = '';
+    }
+
+    function convertir(nombreInput){
+		nombreInput.value = nombreInput.value.toUpperCase();
+	}
+	
+</script>
+</body>
+</html>

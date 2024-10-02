@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM Eventos</title>
+</head>
+<body>
+
+     <h1 id="titulo">
+	   Manejo del DOM javascript
+    </h1>
+
+     nombre: <input type="text" id="nombre" >
+     <br><br>
+     apellido : <input type="text" id="apellido" name="">
+
+     <script>
+     	/*
+     	document.getElementById("nombre").addEventListener('focus', cambiar);
+     	document.getElementById("nombre").addEventListener('blur', regresar);
+
+     	document.getElementById("apellido").addEventListener('focus', cambiar);
+     	document.getElementById("apellido").addEventListener('blur', regresar);
+
+     	function cambiar(event){
+     		let elemento = event.target;
+     		console.log(elemento);
+     		elemento.style.background = 'yellow';
+
+     	}
+
+     	function regresar(event){
+     		let elemento = event.target;
+     		console.log(elemento);
+     		elemento.style.background = 'white';
+
+     	}
+
+     	*/
+
+     	document.getElementById("nombre").addEventListener("focus", evento => {
+     		evento.target.style.background="yellow";
+     	})
+
+     	document.getElementById("nombre").addEventListener("blur", (evento)=>{
+     		evento.target.style.background="white";
+     	})
+
+     	document.getElementById("apellido").addEventListener("focus", (evento)=>{
+     		evento.target.style.background="yellow";
+     	})
+
+     	document.getElementById("apellido").addEventListener("blur", (evento)=>{
+     		evento.target.style.background="white";
+     	})
+
+
+
+     </script>
+
+
+</body>
+</html>

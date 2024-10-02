@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM </title>
+</head>
+<body>
+
+   <div id="container">
+    <h1>Ejercicio de Creación de Elementos</h1>
+  </div>
+
+
+	<script>
+
+		let nuevoH1 = document.createElement('h1');
+		let nuevoParrafo = document.createElement('p');
+
+		let textoH1 = document.createTextNode('Hola mundo!');
+		let textoParrafo = document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+
+		nuevoH1.appendChild(textoH1);
+      nuevoParrafo.appendChild(textoParrafo);
+
+      let contenedor = document.getElementById('container');
+
+      //contenedor.appendChild(nuevoH1);
+      //contenedor.appendChild(nuevoParrafo);
+
+      contenedor.innerHTML =`<h1>Hola mundo!</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> `;
+
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM Formulario</title>
+</head>
+<body>
+	 <h1>Formulario</h1>
+
+	 <form id ="formulario">
+	 	Nombre:   <input type="text" value="" name="nombre">
+	 	<br><br>
+	 	Apellido: <input type="text" value="" name="apellido">
+	 	<br><br>
+	 	
+	 </form>
+
+	 <button onclick="mostrarValores()" >ENVIAR</button>
+
+	 <h1 id="dato"></h1>
+
+	 <script>
+	 	
+	 	function mostrarValores(){
+
+	 		let formulario = document.forms["formulario"];
+
+	 		let nombre = formulario['nombre'].value;
+
+	 		let apellido = formulario['apellido'].value;
+
+	 		let nombreCompleto = nombre + ' ' + apellido;
+
+	 		// if(nombre.toUpperCase() == "PEPE"){
+	 		// 	console.log("Entre en PEPE");	
+	 		// }
+
+	 		let dato = document.getElementById('dato');
+
+	 		console.log(dato);
+
+	 		dato.innerHTML = nombreCompleto.toUpperCase();
+	 		
+	 	}
+	 </script>
+
+</body>
+</html>

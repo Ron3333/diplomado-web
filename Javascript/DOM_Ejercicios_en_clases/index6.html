@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM</title>
+</head>
+<body>
+
+	<!-- <h1 id="titulo" >Hola desde AEP</h1> -->
+
+	 <h1 id="titulo2" onmouseover="rojo(this)"  onmouseout="azul(this)">
+	   Manejo del DOM javascript</h1> 
+
+	   <h1 id="titulo" onmousedown="rojo(this)"  onmouseup="azul(this)" onclick="verde(this)">
+	   Manejo del DOM javascript
+    </h1>
+
+    <!-- ejercicio -->
+
+	<p onmouseover="mostrarMensaje()" onmouseout="ocultarMensaje()">Pasa el mouse sobre este texto</p>
+    <div id="mensaje">¡Hola! Este es un mensaje adicional.</div>
+
+
+
+	<img id="miImagen" src="https://via.placeholder.com/150" onmouseover="aumentarTamano()" onmouseout="restaurarTamano()" alt="Imagen">
+
+	<script>
+		//document.getElementById('titulo').onclick = cambiarTexto;
+
+		// function cambiarTexto(){
+		// 	document.getElementById('titulo').innerHTML = "Hola Mundo";
+		// }
+
+		function rojo(titu){
+			titu.style.color = 'red';
+			console.log("cambio a rojo onmouseover ");
+		}
+
+		function azul(titu){
+			titu.style.color = 'blue';
+			console.log("cambio a azul onmouseout ");
+		}
+
+		function verde(titulo){
+			titulo.style.color = 'green';
+			console.log("cambio a verde onclick ");
+		}
+
+		//Ejercicio
+
+		function mostrarMensaje() {
+            document.getElementById('mensaje').style.display = 'block';
+        }
+
+        function ocultarMensaje() {
+            document.getElementById('mensaje').style.display = 'none';
+        }
+
+		function aumentarTamano() {
+            document.getElementById('miImagen').style.width = '200px';
+        }
+
+        function restaurarTamano() {
+            document.getElementById('miImagen').style.width = '150px';
+        }
+
+	</script>
+
+</body>
+</html>

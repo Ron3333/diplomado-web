@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Atributos DOM </title>
+</head>
+<body>
+
+	<h1 id="uno">Hola de nuevo</h1>
+	<br>
+	<img id="imagen"src="zen.png" >
+	<button onclick="miFuncion()">CSS</button>
+
+	<script>
+		document.getElementById('imagen').style.width ='50px';
+
+
+		function miFuncion(){
+			document.getElementById('uno').style.color = 'red';
+
+			document.getElementById('uno').style.fontSize = '50px'
+
+			document.getElementById('imagen').src ='img.jpg'
+			document.getElementById('imagen').style.width ='250px';
+			
+
+		}
+		
+	</script>
+
+</body>
+</html>

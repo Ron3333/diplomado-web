@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM Class</title>
+</head>
+<style>
+	.box{
+		width: 200px;
+		height: 200px;
+		background-color: yellow;
+		float: left;
+	}
+	.box-2{
+		width: 200px;
+		height: 200px;
+		background-color: orange;
+		float: left;
+	}
+	.limpieza{
+		clear: both;
+	}
+	.rojo{
+		background-color: red;
+	}
+	.azul{
+		background-color: blue;
+	}
+</style>
+<body>
+
+	<div class="box" id="caja-1"></div>
+	<div class="box-2" id="caja-2"></div>
+	<div class="limpieza"></div>
+	<button onclick="addClass()">Añadir</button>
+	<button onclick="removeClass()">Remover</button>
+	<button onclick="toggle()">Toggle</button>
+
+	<script>
+		function addClass(argument) {
+			document.getElementById("caja-1").classList.add('rojo');
+		}
+
+		function removeClass(){
+			document.getElementById("caja-1").classList.remove('rojo');
+		}
+
+		function toggle(){
+			document.getElementById("caja-2").classList.toggle('azul')
+		}
+		
+	</script>
+
+
+
+</body>
+</html>

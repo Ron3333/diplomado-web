@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>API RestFull</title>
+</head>
+<style>
+	.parrafo{
+		color: blue;
+		font-size: 24px;
+	}
+
+	.titulo{
+		color: red;
+		font-size: 60px;
+		font-weight: 500;
+	}
+
+</style>
+<body>
+	<h1>Conexión a una API Rest Full</h1>
+
+	<div id="api">
+		
+	</div>
+
+	<script>
+		const apiUrl = 'https://jsonplaceholder.typicode.com/posts?userId=1';
+
+		async function buscarID(){
+		      const respose =  await fetch(apiUrl);
+		      console.log(respose.status);
+
+		      if(respose.status == 200){
+
+		      	console.log("Conectado");
+
+		      	const  datos = await respose.json();
+		      	//console.log(datos);
+		      	let contenido ="";
+		      	console.log(datos);
+		      	/*
+				for (let i = 0;  i < datos.length  ; i++) {
+					//console.log(datos[i].title);
+					contenido += "<h1>"+ datos[i].title +"</h1>" + "<p>"+datos[i].body+"</p>";
+				}
+				*/
+		      	  for(let dato of datos){
+		      	  	//console.log("ID: "+dato.id+ " Titulo: "+ dato.title + " Contenido: "+ dato.body);
+		      	  	contenido += `<h1 class="titulo"> ${dato.title} </h1> 
+		      	  				<P class="parrafo"> ${dato.body} </P> `;
+		      	  }
+
+		      	document.getElementById("api").innerHTML = contenido;
+		      }
+  	    }
+
+  	    buscarID();
+	</script>
+
+</body>
+</html>
