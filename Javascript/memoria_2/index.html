@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Memory Game</title>
+	<style>
+		 body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #tablero {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-gap: 10px;
+        }
+        .carta {
+            width: 100px;
+            height: 100px;
+            background-color: #007BFF;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .carta.revelada img {
+            background-color: #28A745;
+            /*visibility: visible;*/
+        }
+        .carta.oculta img {
+            background-color: #007BFF;
+            /*visibility: hidden;*/
+        }
+
+        .carta img {
+        	width: 100px;
+        }
+        #mensaje {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        #reiniciar {
+        	display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+		
+	</style>
+</head>
+<body>
+	<h1>Juego de Memoria</h1>
+    <div id="tablero"></div>
+    <div id="mensaje"></div>
+
+    <button id="reiniciar" onclick="reiniciarJuego()">Reiniciar Juego</button>
+
+    <script>
+    		const cartas = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H'];
+    		 let tablero = [];
+             let primeraCarta = null;
+             let segundaCarta = null;
+             let cartasReveladas = 0;
+
+
+      function mezclarCartas() {
+	    for (let i = cartas.length - 1; i > 0; i--) {
+	        //console.log("i: "+i+": "+cartas[i]);
+	        let aleatorio = Math.random();
+	        //console.log("aleatorio: "+aleatorio);
+	        const j = Math.floor(aleatorio * (i + 1));
+	        //console.log("J: "+j);
+	        //console.log("j: "+cartas[j]);
+	                [cartas[i], cartas[j]] = [cartas[j], cartas[i]];
+	        //console.log("cartas: "+cartas);
+	       }
+	            
+	}
+
+   	function crearTablero() {
+            const tableroElemento = document.getElementById('tablero');
+            tableroElemento.innerHTML = '';
+            for (let i = 0; i < cartas.length; i++) {
+                const cartaElemento = document.createElement('div');
+
+                const cartaElementoIMG = document.createElement('img');
+                cartaElementoIMG.setAttribute('src', "");
+                //cartaElementoIMG.setAttribute('src', cartas[i]+".png");
+
+                cartaElemento.appendChild(cartaElementoIMG);
+
+                cartaElemento.classList.add('carta', 'oculta');
+                cartaElemento.setAttribute('data-valor', cartas[i]);
+                cartaElemento.addEventListener('click', revelarCarta);
+                tableroElemento.appendChild(cartaElemento);
+                tablero.push(cartaElemento);
+            }
+            //console.log(tablero);
+    }
+
+    function revelarCarta() {
+    		console.log(this);
+            //console.log(primeraCarta);
+            //console.log(segundaCarta);
+            if (primeraCarta && segundaCarta) return; // Evitar más de 2 cartas reveladas
+
+            this.classList.remove('oculta');
+            this.classList.add('revelada');
+            //this.textContent = this.getAttribute('data-valor'); // Mostrar letra
+            this.style.width = '100px';
+            this.style.src = this.getAttribute('data-valor') + ".png";
+
+            if (!primeraCarta) {
+                primeraCarta = this;
+            } else {
+                segundaCarta = this;
+                verificarCoincidencia();
+            }
+            //console.log(primeraCarta);
+            //console.log(segundaCarta);
+        }
+
+        function verificarCoincidencia() {
+            const valorPrimera = primeraCarta.getAttribute('data-valor');
+            const valorSegunda = segundaCarta.getAttribute('data-valor');
+
+            if (valorPrimera === valorSegunda) {
+                cartasReveladas += 2;
+                if (cartasReveladas === cartas.length) {
+                    document.getElementById('mensaje').textContent = '¡Felicidades! Has encontrado todos los pares.';
+                    document.getElementById("reiniciar").style.display="block";
+                }
+                resetearCartas();
+            } else {
+                setTimeout(() => {
+                    primeraCarta.classList.remove('revelada');
+                    primeraCarta.classList.add('oculta');
+                    primeraCarta.textContent = ''; // Ocultar letra
+                    segundaCarta.classList.remove('revelada');
+                    segundaCarta.classList.add('oculta');
+                    segundaCarta.textContent = ''; // Ocultar letra
+                    resetearCartas();
+                }, 1000);
+            }
+        }
+
+
+        function reiniciarJuego() {
+            tablero = [];
+            cartasReveladas = 0;
+            mezclarCartas();
+            crearTablero();
+            document.getElementById('mensaje').textContent = '';
+        }
+
+        function resetearCartas() {
+            primeraCarta = null;
+            segundaCarta = null;
+        }
+
+        mezclarCartas();
+        crearTablero();
+
+    </script>
+</body>
+</html>
