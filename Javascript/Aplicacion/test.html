@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+       
+    </head>
+
+    <body>
+  
+        <script>
+            // Array de estudiantes
+        const estudiantes = [
+            { nombre: 'Ana', edad: 22 },
+            { nombre: 'Luis', edad: 25 },
+            { nombre: 'Marta', edad: 20 },
+            { nombre: 'Carlos', edad: 23 }
+        ];
+
+
+       let indice = estudiantes.findIndex(estudiante => estudiante.nombre === 'Marta');
+       console.log(indice);
+
+
+       
+   // Array de frutas
+    const frutas = ['Manzana', 'Banana', 'Naranja', 'Fresa'];
+
+    // Función para eliminar y reemplazar una fruta
+    const eliminarYReemplazarFruta = (indice, nuevaFruta) => {
+        // Elimina 1 elemento en el índice especificado y agrega nuevaFruta
+        frutas.splice(indice, 1, nuevaFruta);
+    };
+
+    // Ejemplo de uso
+    console.log('Antes:', frutas); // Muestra el array antes de la modificación
+
+    eliminarYReemplazarFruta(3, 'Kiwi'); // Elimina la fruta en el índice 1 y agrega 'Kiwi'
+
+    console.log('Después:', frutas); // Muestra el array después de la modificación
+
+
+    const eliminarFruta = (indice) => {
+    const frutasEliminadas = frutas.splice(indice, 1);
+    return frutasEliminadas; // Devuelve la fruta eliminada
+    };
+
+    // Ejemplo de uso
+    const frutaEliminada = eliminarFruta(2); // Elimina la fruta en el índice 2
+    console.log('Fruta eliminada:', frutaEliminada); // 'Naranja'
+    console.log('Frutas restantes:', frutas); // ['Manzana', 'Kiwi', 'Fresa']
+
+        </script>
+    </body>
+</html>

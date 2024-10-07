@@ -1,0 +1,51 @@
+Ejemplo de slice
+Supongamos que tienes un array de números y deseas obtener una parte de ese array.
+
+javascript
+
+Copiar
+// Array de números
+const numeros = [10, 20, 30, 40, 50, 60];
+
+// Usando slice para obtener una parte del array
+const obtenerParteDelArray = (inicio, fin) => {
+    return numeros.slice(inicio, fin);
+};
+
+// Ejemplo de uso
+const parte1 = obtenerParteDelArray(1, 4); // Debería devolver [20, 30, 40]
+const parte2 = obtenerParteDelArray(2); // Debería devolver [30, 40, 50, 60]
+const parte3 = obtenerParteDelArray(0, 3); // Debería devolver [10, 20, 30]
+
+console.log(parte1); // [20, 30, 40]
+console.log(parte2); // [30, 40, 50, 60]
+console.log(parte3); // [10, 20, 30]
+Desglose del Ejemplo
+Array de Números: numeros es un array que contiene varios números.
+Función obtenerParteDelArray:
+Usa slice(inicio, fin) para devolver una nueva copia de una sección del array.
+Parámetros:
+inicio: El índice donde comienza la porción (incluido).
+fin: El índice donde termina la porción (no incluido). Si no se proporciona, slice toma todos los elementos 
+desde el índice de inicio hasta el final del array.
+Ejemplos de Uso:
+obtenerParteDelArray(1, 4): Devuelve los elementos desde el índice 1 hasta el índice 4 (excluido), dando como
+resultado [20, 30, 40].
+obtenerParteDelArray(2): Devuelve todos los elementos desde el índice 2 hasta el final del array, resultando 
+en [30, 40, 50, 60].
+obtenerParteDelArray(0, 3): Devuelve los elementos desde el índice 0 hasta el índice 3 (excluido), resultando
+ en [10, 20, 30].
+Resultado Esperado
+Al ejecutar el código, deberías obtener:
+
+json
+
+Copiar
+[20, 30, 40]
+[30, 40, 50, 60]
+[10, 20, 30]
+Consideraciones
+No Modifica el Array Original: slice crea una nueva copia de la sección del array y no modifica el array original, 
+lo que es útil para mantener la inmutabilidad.
+Índices Negativos: Puedes usar índices negativos con slice para contar desde el final del array. Por ejemplo,
+ numeros.slice(-3) devolvería los últimos tres elementos [40, 50, 60].
