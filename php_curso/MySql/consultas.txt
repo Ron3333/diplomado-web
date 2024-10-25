@@ -4,4 +4,4 @@ SELECT COUNT(`nombre`) AS `Cantidad de Usuarios`, `email` FROM `usuarios`;
 
 SELECT `nombre`,`apellido`,`titulo`, `contenido`, u.id AS `ID USUARIO`, a.id_usuario AS `ID USUARIO EN ART`, a.id AS `ID ARTICULO` FROM `usuarios` AS u , `articulo` AS a WHERE u.id = a.id_usuario;
 
-SELECT u.`nombre`, u.`apellido`, a.`titulo`, a.`contenido`, c.`contenido` AS `Comentario` FROM `usuarios` AS u , `articulo` AS a, `comentarios` AS c WHERE u.id = a.id_usuario AND a.id = c.id_articulo;
+SELECT `nombre`,`apellido`, `contenido` FROM `usuarios` AS u , `comentarios` AS c WHERE u.id = c.id_usuario;
