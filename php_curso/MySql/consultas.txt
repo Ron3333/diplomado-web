@@ -1,0 +1,5 @@
+SELECT * FROM `usuarios` WHERE `nombre` LIKE '%j'
+
+SELECT COUNT(`nombre`) AS `Cantidad de Usuarios`, `email` FROM `usuarios`;
+
+SELECT `nombre`,`apellido`,`titulo`, `contenido`, u.id AS `ID USUARIO`, a.id_usuario AS `ID USUARIO EN ART`, a.id AS `ID ARTICULO` FROM `usuarios` AS u , `articulo` AS a WHERE u.id = a.id_usuario;
