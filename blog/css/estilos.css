@@ -1,0 +1,25 @@
+a{
+	text-decoration: none;
+}
+
+.lista li{
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid gray;
+
+}
+
+.register{
+	margin: 15px;
+}
+
+.exito{
+	margin-top: 15px;
+	color: green;
+	text-align: center;
+}
+
+.alerta{
+	color: red;
+	text-align: center;
+}
