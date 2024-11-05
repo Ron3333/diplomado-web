@@ -1,0 +1,48 @@
+a{
+	text-decoration: none;
+}
+
+.lista li{
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid gray;
+
+}
+
+.register{
+	margin: 15px;
+}
+
+.exito{
+	margin-top: 15px;
+	color: green;
+	text-align: center;
+}
+
+.alerta{
+	color: red;
+	text-align: center;
+}
+
+.stats{
+	font-weight: 600;
+	color: #e24e2b;
+	font-size: 18px;
+	padding: 0px 20px;
+	text-align: center;
+}
+
+.panel{
+	background-color: blanchedalmond;
+	border: 2px solid blue;
+	text-align: center;
+	height: 40px;
+	padding-top: 15px;
+
+}
+
+.tabla-articulos{
+	text-align: center;
+	margin-top: 20px;
+
+}
